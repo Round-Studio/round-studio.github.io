@@ -14,7 +14,7 @@ window.addEventListener('scroll', function() {
         topbar.style.top = '0';
         topbar.style.right = '0';
         topbar.style.left = '0';
-        topbar.style.backgroundColor  = "rgba(0, 0, 0, 0.3)";
+        topbar.style.backgroundColor  = "rgba(0, 0, 0, 0)";
         topbar.style.boxShadow  = "0 0 0 #b8b8b8";
         topbar.style.borderRadius  = '0px';
     }
