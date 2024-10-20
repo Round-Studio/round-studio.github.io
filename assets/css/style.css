@@ -1,0 +1,63 @@
+html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body{
+    background-image: url("https://bing.img.run/uhd.php");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-attachment: fixed;
+    z-index: -1; 
+}
+.background-div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(10px);
+    z-index: -1;
+}
+.topbar {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    display: flex;
+    height: 110px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+.menu-btn {
+    background-color: #525252;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    margin: 0 3px;
+    border-radius: 10000px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+.menu-btn:hover {
+    background-color: #fff;
+    color: #525252;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+}
+a {
+    text-decoration: none;
+}
+.menu{
+    margin: 0 15px;
+}
