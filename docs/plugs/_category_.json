@@ -1,0 +1,8 @@
+{
+  "label": "插件",
+  "position": 0,
+  "link": {
+    "type": "generated-index",
+    "description": "教你如何快速编写RST插件"
+  }
+}
