@@ -22,9 +22,9 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'MinecraftYJQ', // Usually your GitHub org/user name.
+  organizationName: 'Round-Studio/MinecraftYJQ', // Usually your GitHub org/user name.
   projectName: 'round-studio.github.io', // Usually your repo name.
-  deploymentBranch :'Round-Studio',
+  deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
   // Even if you don't use internationalization, you can use this field to set
