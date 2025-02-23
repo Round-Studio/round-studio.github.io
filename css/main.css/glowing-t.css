@@ -1,0 +1,61 @@
+.glowing-text {
+  color: #ffffff; /* 黑色文字，确保与背景有足够的对比度 */
+  text-shadow: 0 0 3px #ffffff,
+    /* 白色发光，缩小模糊半径 */ 0 0 5px #ffffff,
+    /* 白色发光，缩小模糊半径 */ 0 0 8px #ffffff; /* 白色发光，缩小模糊半径 */
+  font-size: 48px; /* 设置字体大小 */
+  font-weight: bold; /* 设置字体加粗 */
+  white-space: pre-wrap; /* 允许换行 */
+  word-wrap: break-word; /* 允许长单词换行 */
+  overflow-wrap: break-word; /* 兼容不同浏览器的换行设置 */
+}
+
+.glowing-text {
+  color: #ffffff; /* 黑色文字，确保与背景有足够的对比度 */
+  text-shadow: 0 0 3px #ffffff,
+    /* 白色发光，缩小模糊半径 */ 0 0 5px #ffffff,
+    /* 白色发光，缩小模糊半径 */ 0 0 8px #ffffff; /* 白色发光，缩小模糊半径 */
+  font-size: 48px; /* 设置字体大小 */
+  font-weight: bold; /* 设置字体加粗 */
+  white-space: pre-wrap; /* 允许换行 */
+  word-wrap: break-word; /* 允许长单词换行 */
+  overflow-wrap: break-word; /* 兼容不同浏览器的换行设置 */
+}
+
+.glowing-line {
+  position: relative; /* 设置相对定位 */
+  padding: 20px; /* 设置内边距 */
+  background-color: transparent; /* 设置背景颜色为透明 */
+  /* color: #fff; 设置文字颜色 */
+  /*font-size: 18px;  设置字体大小 */
+  /*overflow: hidden;  隐藏溢出部分 */
+}
+
+.glowing-line::before {
+  content: ''; /* 伪元素内容为空 */
+  position: absolute; /* 绝对定位 */
+  top: 0; /* 定位到顶部 */
+  left: 0; /* 定位到左侧 */
+  right: 0; /* 定位到右侧 */
+  height: 5px; /* 设置高度为5px，即线条的厚度 */
+  background: linear-gradient(
+    to right,
+    #ff7e5f,
+    #feb47b
+  ); /* 设置渐变色 */
+  opacity: 0.6; /* 设置初始透明度 */
+  transition: opacity 0.3s ease; /* 设置透明度变化的过渡效果 */
+}
+
+@keyframes glow-animations {
+  0%, 100% {
+    opacity: 0.6; /* 开始和结束时的透明度 */
+  }
+  50% {
+    opacity: 1; /* 中间时刻的透明度 */
+  }
+}
+
+.glowing-line::before {
+  animation: glow-animations 2s infinite; /* 应用动画 */
+}

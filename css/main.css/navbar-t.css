@@ -1,0 +1,57 @@
+ /* 自定义导航栏样式 */
+ .navbar-custom {
+  background-color: rgba(0, 0, 0, 0.7); /* 黑色透明背景 */
+  transition: background-color 0.5s ease; /* 背景颜色过渡效果 */
+}
+
+.navbar-custom .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-custom .navbar-brand img {
+  height: 50px; /* 控制产品图片大小 */
+}
+
+.navbar-custom .navbar-brand span {
+  color: white;
+  text-shadow: 0 0 10px white; /* 名字发光效果 */
+}
+
+.navbar-custom .nav-link {
+  position: relative;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.navbar-custom .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 5px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b); /* 渐变色下划线 */
+  border-radius: 5px; /* 四角圆角 */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover::after {
+  opacity: 1;
+}
+
+/* 发光动画 */
+@keyframes glow-animation {
+  from {
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+  to {
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.8);
+  }
+}
+
+.navbar-custom {
+  animation: glow-animation 2s infinite alternate; /* 发光动画 */
+}

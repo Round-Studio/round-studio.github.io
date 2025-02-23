@@ -1,0 +1,42 @@
+    /* 自定义alert样式 */
+    .alert-custom {
+      border: 3px solid white; /* 设置边框厚度和颜色 */
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)); /* 设置黑色半透明渐变背景 */
+      color: white; /* 设置文本颜色 */
+      padding: 15px; /* 调整内边距 */
+      position: relative; /* 相对定位 */
+      overflow: hidden; /* 隐藏溢出 */
+      border-radius: 10px; /* 设置圆角 */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column; /* 使内容垂直居中 */
+  }
+
+  .alert-custom::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      background: white;
+      z-index: -1; /* 确保在文本后面 */
+      opacity: 0.5; /* 调整透明度 */
+      border-radius: 12px; /* 设置圆角 */
+  }
+
+  /* 发光动画 */
+  @keyframes glow-animation {
+      from {
+          box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+      }
+      to {
+          box-shadow: 0 0 40px rgba(255, 255, 255, 0.8);
+      }
+  }
+
+  .alert-custom {
+      animation: glow-animation 2s infinite alternate; /* 发光动画 */
+  }
